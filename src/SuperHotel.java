@@ -4,24 +4,26 @@
  */
 
 /**
- *
  * @author Melek Homrani
  */
 
 
 public class SuperHotel {
-    static int x[];
+    static int[] x;
 
 
-    public void reserver(){
-    
-              x[0] = 1;     
+    public void reserver() {
+        x[0] = 1;
     }
-    
-    public static void main(String args[]) {
-        
-        SuperHotel s = new SuperHotel();
-        s.reserver();
+
+    public static void main(String[] args) {
+
+        try {
+            SuperHotel s = new SuperHotel();
+            s.reserver();
+        } catch (NullPointerException e) {
+            System.out.println("Null pointer.");
+        }
     }
 }
 
